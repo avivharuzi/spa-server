@@ -2,9 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const path = require('path');
+const compression = require('compression');
 
 const app = express();
 
+app.use(compression({ threshold: 0 }));
 app.use(cors());
 app.use(helmet());
 
