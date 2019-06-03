@@ -1,8 +1,8 @@
 # Spa Server
 
-> simple node.js server that can run spa apps
+Simple Node.js server that can run SPA apps.
 
-## .env
+## .env File
 
 PORT
 
