@@ -1,8 +1,8 @@
-const express = require('express');
+const compression = require('compression');
 const cors = require('cors');
+const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
-const compression = require('compression');
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(helmet());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
